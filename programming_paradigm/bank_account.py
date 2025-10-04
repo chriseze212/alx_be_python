@@ -44,9 +44,5 @@ class BankAccount:
 
     def display_balance(self):
         """Print the current balance in a user-friendly format."""
-        # format so that whole numbers don't show unnecessary decimals
-        bal = self.account_balance
-        if float(bal).is_integer():
-            print(f"Current Balance: ${int(bal)}")
-        else:
-            print(f"Current Balance: ${bal:.2f}")
+        # always show two decimal places to match expected currency format
+        print(f"Current Balance: ${self.account_balance:.2f}")
